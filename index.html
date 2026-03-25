@@ -2,18 +2,89 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Progetti della Community</title>
+  <title>The Money Community</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+  const target = 1250; // importo reale
+  let count = 0;
+
+  const counter = document.getElementById("counter");
+
+  const updateCounter = () => {
+    const increment = target / 100;
+
+    if (count < target) {
+      count += increment;
+      counter.innerText = Math.floor(count);
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  updateCounter();
+</script>
+
 <body>
 
 <header>
-  <h1>🚀 Progetti della Community</h1>
-  <p>Scopri e vota le idee più interessanti</p>
+    <img 
+    src="https://toppng.com/uploads/preview/abstract-logo-11549697069y5f0s6q3lv.png" 
+    alt="Logo Community Projects" 
+    class="logo"
+  >
+  <h1>The Money Community</h1>
 </header>
 
+<section class="intro">
+  <p>
+    Questo canale nasce per dare visibilità ai migliori progetti della community.
+    Ogni settimana selezioniamo idee promettenti e le sottoponiamo al voto:
+    il progetto vincitore riceve finanziamenti reali dalla community 🚀
+  </p>
+
+  <div class="piggy-bank">
+    🐷
+    <div class="amount">
+      € <span id="counter">0</span>
+    </div>
+    <p>Fondi rimasti nel salvadanaio</p>
+  </div>
+</section>
+
+<section class="projects">
+  <h2>Progetti selezionati</h2>
+
+<div class="carousel">
+  
+  <a href="https://example.com/progetto1" target="_blank" class="card"
+     style="background-image: url('img/progetto1.jpg')">
+    <div class="overlay">
+      <h3>App Educativa</h3>
+      <p>Una piattaforma per imparare coding gratuitamente</p>
+      <span class="cta">👉 Scopri il progetto</span>
+    </div>
+  </a>
+
+  <a href="https://example.com/progetto2" target="_blank" class="card"
+     style="background-image: url('img/progetto2.jpg')">
+    <div class="overlay">
+      <h3>Eco Startup</h3>
+      <p>Soluzioni sostenibili per ridurre la plastica</p>
+      <span class="cta">👉 Scopri il progetto</span>
+    </div>
+  </a>
+
+</div>
+  <a href="https://youtube.com" target="_blank" class="vote-btn">
+    🔥 Vota su YouTube
+  </a>
+</section>
+
 <section class="video">
-  <h2>🎥 Ultimo Video</h2>
+  <h2>Come funziona?</h2>
 
   <div class="video-container">
     <iframe 

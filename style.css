@@ -9,6 +9,12 @@ body {
 header {
   padding: 40px;
   background: #1e293b;
+  text-align: center;
+}
+
+.logo {
+  width: 80px; /* regola dimensione */
+  height: auto;
 }
 
 .video-container {
@@ -49,4 +55,140 @@ button {
 footer {
   padding: 20px;
   background: #020617;
+}
+
+.intro {
+  text-align: center;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.piggy-bank {
+  margin-top: 20px;
+  font-size: 35px;
+  animation: bounce 2s infinite;
+  transition: transform 0.3s;
+}
+
+.piggy-bank .amount {
+  color: #28a745; /* verde denaro, puoi scegliere un verde più chiaro o più scuro */
+  font-weight: bold;
+  font-size: 28px;
+}
+.amount {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.projects {
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  min-width: 250px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+
+  background-size: cover;
+  background-position: center;
+
+  text-decoration: none;
+  color: white;
+
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* overlay scuro */
+.overlay {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2),
+    transparent
+  );
+}
+
+/* hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.cta {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.vote-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ff0000;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.vote-btn:hover {
+  background: #cc0000;
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.intro p {
+  margin-bottom: 60px; /* aumenta questo valore quanto vuoi */
+}
+
+.piggy-bank {
+  margin-top: 40px;
+}
+
+.video {
+  margin-bottom: 80px;
+  margin-top: 80px;
 }
